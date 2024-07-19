@@ -106,7 +106,7 @@ yarn start
 
 You can download the latest APK from the following link:
 
-<!-- [Download APK](https://expo.dev/artifacts/eas/u5e155fZ53c1Qz4iFVftxp.apk) -->
+[Download APK](https://expo.dev/artifacts/eas/99bGjM6fuvCy9TnCkmTXbL.apk)
 
 ## Usage
 
