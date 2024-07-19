@@ -106,13 +106,13 @@ const ProductDetail = () => {
             <Text
               style={{
                 fontSize: hp(2),
-                fontWeight: "semibold",
+                fontFamily: "Montserrat_600SemiBold",
               }}
             >
               ₦{price}
             </Text>
             <View
-              style={{ flexDirection: "row", alignItems: "center", gap: 4 }}
+              style={{ flexDirection: "row", alignItems: "center", gap: 6 }}
             >
               <Pressable
                 style={[styles.sizeButton, { backgroundColor: "#f0f0f0" }]}
