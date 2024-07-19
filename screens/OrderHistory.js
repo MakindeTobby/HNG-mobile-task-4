@@ -11,7 +11,6 @@ import {
 import React, { useEffect, useState } from "react";
 import { hp, wp } from "../helpers/common";
 import HeaderTwo from "../components/HeaderTwo";
-import { useNavigation } from "@react-navigation/native";
 import { useSQLiteContext } from "expo-sqlite";
 import HistoryCard from "../components/HistoryCard";
 import { theme } from "../constants/theme";
@@ -26,14 +25,16 @@ const OrderHistoryScreen = () => {
 
   const getOrders = async () => {
     try {
-      const allRows = await db.getAllAsync("SELECT * FROM orders");
-      const formatteddata = allRows.map((row) => ({
+      const allRows = await db.getAllAsync(
+        "SELECT * FROM orders ORDER BY id DESC"
+      );
+      const formattedData = allRows.map((row) => ({
         id: row.id,
         orderData: JSON.parse(row.orderData),
       }));
-      setOrders(formatteddata);
+      setOrders(formattedData);
     } catch (error) {
-      console.log("Error while getting orders : ", error);
+      console.log("Error while getting orders: ", error);
     }
   };
 
@@ -85,7 +86,7 @@ const OrderHistoryScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={"default"} />
-      <HeaderTwo name={"History"} />
+      <HeaderTwo name={"Order History"} />
       <FlatList
         data={orders}
         keyExtractor={(item) => item.id}
@@ -124,9 +125,9 @@ const styles = StyleSheet.create({
   },
   startButton: {
     marginBottom: 5,
-    marginHorizontal: 10,
+    marginHorizontal: 50,
     borderColor: theme.colors.dark,
-    padding: 15,
+    padding: 10,
     paddingHorizontal: 50,
     borderRadius: theme.radius.xl,
     borderCurve: "continuous",

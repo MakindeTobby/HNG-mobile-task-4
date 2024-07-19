@@ -153,7 +153,8 @@ const styles = StyleSheet.create({
     fontFamily: "Montserrat_600SemiBold",
   },
   buttonStyle: {
-    width: 93,
+    // width: 93,
+    paddingHorizontal: 20,
     height: 38,
     justifyContent: "center",
     alignItems: "center",

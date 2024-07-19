@@ -9,7 +9,7 @@ const HeaderTwo = ({ name }) => {
   const navigation = useNavigation();
   return (
     <View style={styles.header}>
-      <View style={styles.section}>
+      <View style={{ flex: 0.4 }}>
         <TouchableOpacity
           onPress={() => navigation.goBack()}
           style={styles.backBtn}
@@ -20,7 +20,7 @@ const HeaderTwo = ({ name }) => {
       <View style={styles.section}>
         <Text style={styles.title}>{name}</Text>
       </View>
-      <View style={styles.section}></View>
+      <View></View>
     </View>
   );
 };
@@ -30,7 +30,8 @@ export default HeaderTwo;
 const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    // gap: 10,
+    // justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: wp(2),
     paddingVertical: hp(1),

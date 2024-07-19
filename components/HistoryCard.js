@@ -90,7 +90,7 @@ const HistoryCard = ({ item, deleteOrder }) => {
               <Text style={styles.buttonText}>Details</Text>
             </TouchableOpacity>
           </View>
-          <Text style={{ color: "green", fontSize: 15 }}>Delivered</Text>
+          <Text style={{ color: "green", fontSize: 15 }}>Completed</Text>
         </View>
       </View>
     </View>

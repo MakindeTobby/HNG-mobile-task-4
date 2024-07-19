@@ -84,6 +84,7 @@ const Checkout = () => {
           placeholder="Delivery Address"
           value={delivery}
           onChangeText={setDelivery}
+          autoCapitalize="none"
         />
 
         <Text style={styles.sectionTitle}>Contact</Text>
@@ -91,6 +92,7 @@ const Checkout = () => {
           style={styles.input}
           placeholder="Full Name"
           keyboardType="default"
+          inputMode="text"
           value={contact}
           onChangeText={setContact}
         />
@@ -98,14 +100,17 @@ const Checkout = () => {
           style={styles.input}
           placeholder="Email"
           keyboardType="email-address"
+          inputMode="email"
           value={contact1}
           onChangeText={setContact1}
+          autoCapitalize="none"
         />
         <TextInput
           style={styles.input}
           placeholder="Phone No"
           keyboardType="phone-pad"
           value={contact2}
+          inputMode="tel"
           onChangeText={setContact2}
         />
 

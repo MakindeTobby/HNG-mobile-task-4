@@ -28,7 +28,7 @@ const OrderDetail = () => {
         </View>
         <View style={styles.textCont}>
           <Text style={styles.title}>Ref: {order?.orderData?.ref_code}</Text>
-          <Text style={[styles.itemTitle, { color: "green" }]}>Delivered</Text>
+          <Text style={[styles.itemTitle, { color: "green" }]}>Completed</Text>
         </View>
         <View style={styles.textCont}>
           <Text style={styles.title}>
@@ -121,12 +121,12 @@ const styles = StyleSheet.create({
   },
   scrollContainer: {
     paddingHorizontal: 5,
-    paddingBottom: 100, // Add some padding at the bottom
+    paddingBottom: 10, // Add some padding at the bottom
   },
   title: {
     fontSize: 16,
     fontFamily: "Montserrat_600SemiBold",
-    marginBottom: 10,
+    marginBottom: 5,
   },
   itemContainer: {
     padding: 10,
