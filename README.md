@@ -1,6 +1,6 @@
 # Timbu Shopping App
 
-This is an Update on the USER INTERFACE & FUNCTIONALITY of the HNG Shopping App Task! This application allows users to simulate the experience of browsing products, view details, add them to a cart, and checkout.
+This is an Update on the USER INTERFACE & FUNCTIONALITY of the HNG Shopping App Task! This application allows users to simulate the experience of browsing products, view details, add them to a cart, checkout and payment.
 
 Data fetched from the Timbu Api
 

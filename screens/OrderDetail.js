@@ -96,7 +96,7 @@ const OrderDetail = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={"default"} />
+      <StatusBar barStyle={"dark-content"} />
       <HeaderTwo name={`Order ID: ${order?.id}`} />
 
       <FlatList

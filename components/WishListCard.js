@@ -166,5 +166,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: theme.colors.dark,
     fontSize: 12,
+    fontFamily: "Montserrat_600SemiBold",
   },
 });

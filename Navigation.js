@@ -28,11 +28,11 @@ const BottomTabNavigator = () => (
       tabBarActiveTintColor: theme.colors.primary,
       tabBarStyle: [
         styles.tabContainer,
-        Platform.OS === "ios" && {
-          shadowOffset: { height: 2, width: 2 },
-          shadowOpacity: 0.1,
-          shadowRadius: 14,
-        },
+        // Platform.OS === "ios" && {
+        //   shadowOffset: { height: 2, width: 2 },
+        //   shadowOpacity: 0.1,
+        //   shadowRadius: 14,
+        // },
       ],
       tabBarItemStyle: {
         marginBottom: 7,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     left: "5%",
     bottom: 10,
     backgroundColor: theme.colors.dark,
-    height: 70,
+    height: 65,
   },
   label: {
     textTransform: "capitalize",

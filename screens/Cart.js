@@ -89,7 +89,7 @@ const Cart = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={"default"} />
+      <StatusBar barStyle={"dark-content"} />
       <Header name={"My Cart"} />
       <FlatList
         data={cartItems}

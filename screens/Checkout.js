@@ -47,7 +47,7 @@ const Checkout = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={"default"} />
+      <StatusBar barStyle={"dark-content"} />
       <HeaderTwo name={"Checkout"} />
       <ScrollView contentContainerStyle={styles.scrollContainer}>
         <Text style={styles.subtitle}>

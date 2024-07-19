@@ -108,7 +108,13 @@ const ProductCard = ({ item, setToastMessage, setToastVisible }) => {
           <AntDesign name="staro" size={13} color="#FFC657" />
         </View>
         <View>
-          <Text style={{ fontSize: 14, color: theme.colors.primary }}>
+          <Text
+            style={{
+              fontSize: 15,
+              color: theme.colors.primary,
+              fontFamily: "Montserrat_600SemiBold",
+            }}
+          >
             N {price}
           </Text>
         </View>
@@ -205,6 +211,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: theme.colors.dark,
     fontSize: 12,
+    fontFamily: "Montserrat_600SemiBold",
   },
   sizeButton: {
     width: 25,

@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from "react-native";
 import React from "react";
 import { hp, wp } from "../helpers/common";
 import { AntDesign } from "@expo/vector-icons";
@@ -11,13 +18,15 @@ const Header = ({ name, isWish }) => {
   const navigation = useNavigation();
   return (
     <View style={styles.header}>
-      <View style={styles.section}>
-        <Image
-          style={styles.imageUrl}
-          source={require("../assets/Malltiverse-Logo.png")}
-          resizeMode="contain"
-        />
-      </View>
+      <TouchableWithoutFeedback onPress={() => navigation.navigate("Home")}>
+        <View style={styles.section}>
+          <Image
+            style={styles.imageUrl}
+            source={require("../assets/Malltiverse-Logo.png")}
+            resizeMode="contain"
+          />
+        </View>
+      </TouchableWithoutFeedback>
       <View style={styles.section}>
         <Text style={styles.title}>{name}</Text>
       </View>

@@ -73,7 +73,7 @@ const Payment = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Loader visible={isLoading} name={"Confirming Payment"} />
-      <StatusBar barStyle={"default"} />
+      <StatusBar barStyle={"dark-content"} />
       <HeaderTwo name={"Payment"} />
       <Paystack
         paystackKey="pk_test_63450edff7c9728f9dfeee917786e54690c6c89e"

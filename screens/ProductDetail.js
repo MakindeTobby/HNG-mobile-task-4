@@ -60,7 +60,6 @@ const ProductDetail = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#fff" }}>
-      <StatusBar barStyle={"light-content"} />
       <ScrollView>
         <View style={{ position: "relative" }}>
           <ScrollView

@@ -4,7 +4,6 @@ import {
   StatusBar,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from "react-native";
 import React from "react";
@@ -12,8 +11,8 @@ import { useSelector } from "react-redux";
 import { hp, wp } from "../helpers/common";
 import WishlistCard from "../components/WishListCard";
 import { theme } from "../constants/theme";
-import { FontAwesome } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import Header from "../components/Header";
 
 const Wishlist = () => {
   const navigation = useNavigation();
@@ -25,21 +24,8 @@ const Wishlist = () => {
   const wishlistItems = useSelector((state) => state.wishlist.wishArr);
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle={"default"} />
-      <View style={styles.header}>
-        <View style={styles.section}>
-          <TouchableOpacity
-            onPress={() => navigation.goBack()}
-            style={styles.backBtn}
-          >
-            <FontAwesome name="arrow-left" size={15} color={"#fff"} />
-          </TouchableOpacity>
-        </View>
-        <View style={styles.section}>
-          <Text style={styles.title}>{"My Wishlist"}</Text>
-        </View>
-        <View style={styles.section}></View>
-      </View>
+      <StatusBar barStyle={"dark-content"} />
+      <Header name={"My Wishlist"} />
       <FlatList
         data={wishlistItems}
         keyExtractor={(item) => item.id}
@@ -68,28 +54,5 @@ const styles = StyleSheet.create({
     fontSize: 24,
     color: "#4B5563",
     fontFamily: "Montserrat_400Regular",
-  },
-  header: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    paddingHorizontal: wp(2),
-    paddingVertical: hp(1),
-  },
-  section: {
-    flex: 1,
-    alignItems: "flex-start",
-  },
-  title: {
-    fontSize: 19,
-    fontFamily: "Montserrat_600SemiBold",
-  },
-  backBtn: {
-    backgroundColor: theme.colors.primary,
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    justifyContent: "center",
-    alignItems: "center",
   },
 });

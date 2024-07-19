@@ -60,7 +60,7 @@ const Home = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Loader visible={isLoading} name={"Loading Products"} />
-      <StatusBar barStyle={"default"} />
+      <StatusBar barStyle={"dark-content"} />
       <Header name={"Product List"} isWish={isWish} />
       <ScrollView
         showsVerticalScrollIndicator={false}
